@@ -58,6 +58,7 @@ console.log(newPerson); // Output: { name: "Adam", age: 25, gender: "male" }
 // eleven
 let person7 = { name: "Adam", age: 25 };
 Object.freeze(person7);
+// هاي الفنكشن بتجمد الاوبجكت يعني لو حاولت اضيف او احذف منه مش راح يزبط
 person7.age = 30;
 console.log(person7); // Output: { name: "Adam", age: 25 }
 // last one
@@ -66,3 +67,6 @@ Object.seal(person8);
 person8.age = 30;
 person8.gender = "male";
 console.log(person8); // Output: { name: "Adam", age: 30 }
+// object.seal
+// بقدر اغير بالـفاليو الموجودة
+//  بس ما بقدر اضيف عليه فاليو جديدة
