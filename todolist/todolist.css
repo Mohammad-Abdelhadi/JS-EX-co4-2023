@@ -1,0 +1,20 @@
+body {
+  height: 100vh;
+  /* background: linear-gradient(57deg, #dfd 56%, #04a 50%); */
+  background-color: #7eb9a5;
+}
+.our-input {
+  width: 20%;
+  height: 40px;
+}
+.our-input p {
+  border: 3px solid red;
+  width: 100%;
+  text-align: center;
+  background: #edd;
+  font-weight: bold;
+}
+.finished {
+  text-decoration: line-through;
+  color: green;
+}
