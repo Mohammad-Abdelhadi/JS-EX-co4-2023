@@ -31,26 +31,38 @@
 //   }
 
 // });
+window.onload = function () {
+  input.focus();
+};
+
 let input = document.getElementById("ourinput");
 let ourbutton = document.getElementById("ourbutton");
 
 ourbutton.addEventListener("click", function () {
   if (input.value.trim() !== "") {
     let newdiv = document.createElement("div");
-
-    newdiv.innerHTML = `<p>${input.value} <button class="delete">Delete</button></p>`;
-
+    newdiv.className = "newdiv";
+    newdiv.innerHTML = `<span>${input.value} </span>
+    <button class="delete">Delete</button>`;
     document.body.appendChild(newdiv);
-
     let deleteButton = newdiv.querySelector(".delete");
     deleteButton.addEventListener("click", function () {
       newdiv.remove();
     });
-
     newdiv.addEventListener("click", function () {
       newdiv.classList.toggle("finished");
+    });
+    let p = newdiv.querySelector("span");
+    p.addEventListener("click", function () {
+      p.contentEditable = true;
     });
   } else {
     alert("Enter a value");
   }
 });
+
+//   newdiv.addEventListener("click", function () {
+//   });
+//   for (let i = 0; i < newdiv.length; i++) {
+//     document.newdiv.querySelector[i]("p").contentEditable = "true";
+//   }
